@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    background-color: #f4f4f4; /* Light grey background for overall page */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark grey for navigation */
+    color: #fff;
+    padding: 10px 0; /* Reduced padding for navigation */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* Adjusted margin for navigation items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Adjust font size for navigation */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Tomato color for hover effect */
+}
+
+.content {
+    margin-top: 60px; /* Adjusted for smaller navigation bar */
+    padding: 20px;
+}
+
+section {
+    padding: 60px 20px; /* Increased padding for content blocks */
+    margin: 20px 0; /* Adjusted margin between sections */
+    min-height: 300px; /* Minimum height for each section */
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s, transform 1s;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    background-color: #ffffff; /* White background for all sections */
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+section h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem; /* Font size adjustment for headers */
+    color: #333; /* Dark grey for text for good contrast */
+}
